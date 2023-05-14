@@ -1,4 +1,4 @@
-
+import { motion } from "framer-motion"
 import Circle from "./../assets/circle.png";
 import Circles from "./../assets/circles.png";
 const Explore = () => {
@@ -21,11 +21,20 @@ const Explore = () => {
           </div>
           <div className="relative" data-aos="fade-up" data-aos-duration="700">
             <img src={Circles} alt="Circle" className="w-full h-full" />
-            <img
+            
+            {/* <img
               src={Circle}
               alt="Circle"
               className="absolute top-0 left-0 w-full h-full"
-            />
+            /> */}
+            <motion.img
+      src={Circle}
+      className="absolute top-0 left-0 w-full h-full"
+      initial={{ x: "-100%" }} // start from right edge of container
+      animate={{ x: 0 }} // move to left edge of container
+      transition={{ duration: 3 }} // animate for 1 second
+    />
+            
           </div>
         </div>
       </div>

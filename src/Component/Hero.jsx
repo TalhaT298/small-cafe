@@ -1,4 +1,4 @@
-
+import { motion } from "framer-motion"
 import Dish from "./../assets/dish.png";
 import Plate from "./../assets/plate-of-food-png.png";
 import Tree from "./../assets/tree.png"
@@ -20,7 +20,7 @@ const Hero = () => {
               className="absolute -left-5 -top-24 w-32 h-32"
             />
             <h2 className="font-bold text-center md:text-left text-primary text-5xl md:text-65 pb-5">
-              Order food online <br></br>from your favourite <br></br>local restaurants.
+              Order food online <br></br>from your favourite <br></br>local restaurants<span className="text-orange-500">.</span>
             </h2>
             <div className="text-left">
               <p className="text-center md:text-left text-2xl text-secondary pb-5">
@@ -44,17 +44,22 @@ const Hero = () => {
             data-aos="fade-right"
             data-aos-duration="700"
           >
+            
             <img
               src={Tree}
               alt=""
               className="absolute -right-10 top-10 w-40 h-40"
+              
             />
+             
+            <motion.div animate={{scale:1}}>
             <img
               src={Plate}
               alt=""
               className="absolute -left-16 top-10 w-40 h-40"
             />
-            <div className="absolute flex flex-col items-center justify-center p-2 bg-white left-[40%] top-0 rounded-lg">
+            </motion.div>
+            <div className="absolute flex flex-col items-center justify-center p-2 bg-slate-100 left-[40%] top-0 rounded-lg">
               <h3 className="font-bold text-xl text-orange-500"><BsFillPatchCheckFill className="inline pr-1 pb-1"/>200K+</h3>
               <p className="text-sm text-secondary">People Delivered</p>
             </div>

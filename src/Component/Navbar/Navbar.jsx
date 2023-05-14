@@ -3,6 +3,7 @@ import Cart from "./../../assets/cart.png";
 import MenuBar from "./MenuBar";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Typewriter from 'typewriter-effect';
 import { GoChevronDown } from 'react-icons/go';
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -37,7 +38,14 @@ const Navbar = () => {
                 href="/#home"
                 className="font-medium text-basic text-base hover:text-\[#175CFF\]"
               >
-                Home
+                <Typewriter
+             options={{
+              autoStart: true,
+              loop: true,
+              delay:50,
+              strings: ['Home'],
+             }}
+            />
               </a>
             </li>
             <li>
@@ -45,7 +53,14 @@ const Navbar = () => {
                 href="#about"
                 className="font-medium text-basic text-base hover:text-\[#175CFF\]"
               >
-                Blog
+                <Typewriter
+             options={{
+              autoStart: true,
+              loop: true,
+              delay:50,
+              strings: ['Blog'],
+             }}
+            />
               </a>
             </li>
             <li>
@@ -53,7 +68,14 @@ const Navbar = () => {
                 href="#services"
                 className="font-medium text-basic text-base hover:text-\[#175CFF\]"
               >
-                About Us
+                <Typewriter
+             options={{
+              autoStart: true,
+              loop: true,
+              delay:50,
+              strings: ['About Us'],
+             }}
+            />
               </a>
             </li>
             <li>
@@ -74,9 +96,9 @@ const Navbar = () => {
           >
             <span className="absolute inset-0 bg-primary"></span>
             <span className="absolute inset-0 flex justify-center items-center font-semibold">
-              Log In
+              Login
             </span>
-            Log In
+            Login
           </button>
           <div className="bg-primary p-3 rounded-full">
             <img src={Cart} className="w-full h-full" alt="" />
@@ -84,7 +106,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile And Table Device Menu */}
+      {/* Mobile Menu */}
       {showMenu && (
         <div
           className="top-0 right-0 w-full z-10 bg-[#F0F4EC] py-5 px-5 md:hidden absolute"
